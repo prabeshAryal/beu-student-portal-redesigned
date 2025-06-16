@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "BMU Modernizer",
+    "version": "2.2",
+    "description": "Complete UI overhaul for https://my.beu.edu.az/ - Replaces legacy CSS and JS with a modern, responsive design.",
+    "icons": {
+        "48": "icon48.png",
+        "128": "icon128.svg"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://my.beu.edu.az/*"
+            ],
+            "css": [
+                "modern.css"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_start"
+        }
+    ],
+    "host_permissions": [
+        "*://my.beu.edu.az/*"
+    ]
+}
