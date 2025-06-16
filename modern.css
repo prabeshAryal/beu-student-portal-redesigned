@@ -224,6 +224,28 @@ a:hover {
     color: var(--alert-warning-text) !important;
 }
 
+/* Buttons */
+.btn, .btn-default, input[type="button"], input[type="submit"] {
+    background-color: var(--accent-primary) !important;
+    color: var(--text-primary) !important;
+    padding: 10px 20px !important;
+    border: 1px solid var(--accent-hover) !important;
+    border-radius: 8px !important;
+    cursor: pointer;
+    font-weight: 600 !important;
+    transition: all 0.2s ease-in-out !important;
+    opacity: 0.9;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    text-shadow: none !important;
+}
+.btn:hover, .btn-default:hover, input[type="button"]:hover, input[type="submit"]:hover {
+    background-color: var(--accent-hover) !important;
+    color: var(--text-primary) !important;
+    transform: translateY(-1px);
+    opacity: 1;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
 /* Datepicker & Input Groups */
 .datepicker {
     background-color: var(--bg-dark-secondary) !important;
@@ -258,18 +280,27 @@ a:hover {
 .nav-tabs {
     border-bottom-color: var(--border-color) !important;
 }
-.nav-tabs > li > a {
+.nav-tabs > li > a, .nav-tabs > li > a * {
     color: var(--text-secondary) !important;
+    background-color: transparent !important;
+}
+.nav-tabs > li > a {
     border-radius: 8px 8px 0 0 !important;
-    border-bottom: 1px solid transparent !important;
+    border: 1px solid transparent !important;
+    border-bottom: none !important;
     margin-right: 5px;
+}
+.nav-tabs > li.active > a, 
+.nav-tabs > li.active > a *,
+.nav-tabs > li > a:hover,
+.nav-tabs > li > a:hover * {
+    color: var(--text-primary) !important;
 }
 .nav-tabs > li.active > a, 
 .nav-tabs > li > a:hover {
     background-color: var(--bg-dark-primary) !important;
     border-color: var(--border-color) !important;
     border-bottom-color: transparent !important;
-    color: var(--text-primary) !important;
 }
 .tab-content {
     background: var(--bg-dark-primary) !important;
