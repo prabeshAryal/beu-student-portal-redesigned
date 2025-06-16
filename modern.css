@@ -150,7 +150,7 @@ body {
 }
 
 /* Boxes and Content Areas */
-.box, .box-body, .modContent {
+.box, .box-body, .modContent, .nav-tabs-custom {
     background: transparent !important;
     border: none !important;
     color: var(--text-secondary) !important;
@@ -169,10 +169,10 @@ body {
 }
 
 /* Typography and Links */
-.moduleTitle, h1, h2, h3, h4, h5, h6, b, strong {
+.moduleTitle, h1, h2, h3, h4, h5, h6, b, strong, .mailbox-read-info h5 {
     color: var(--text-primary) !important;
 }
-.mailbox-read-message, .mailbox-read-message * {
+.mailbox-read-message, .mailbox-read-message *, .timeline-body, .timeline-body * {
     color: var(--text-secondary) !important;
 }
 a {
@@ -192,7 +192,7 @@ a:hover {
 .table th, .table td, .simple-table th, .simple-table td {
     padding: 12px 15px;
     text-align: left;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color) !important;
     background-color: transparent !important;
     color: var(--text-secondary) !important;
 }
@@ -211,6 +211,7 @@ a:hover {
     background-color: var(--bg-dark-secondary) !important;
 }
 
+
 /* Alerts and Warnings */
 .alert, .warningMsg {
     border-radius: 8px !important;
@@ -223,7 +224,7 @@ a:hover {
     color: var(--alert-warning-text) !important;
 }
 
-/* Datepicker */
+/* Datepicker & Input Groups */
 .datepicker {
     background-color: var(--bg-dark-secondary) !important;
     border: 1px solid var(--border-color) !important;
@@ -239,6 +240,45 @@ a:hover {
 .datepicker .active {
     background-color: var(--accent-primary) !important;
 }
+.input-group-addon {
+    background-color: var(--bg-dark-tertiary) !important;
+    border: 1px solid var(--border-color) !important;
+    color: var(--text-primary) !important;
+    border-radius: 8px 0 0 8px !important;
+}
+
+
+/* --- Tabs --- */
+.nav-tabs-custom {
+    box-shadow: none;
+    background: var(--bg-dark-secondary) !important;
+    border-radius: 12px;
+    padding: 1rem;
+}
+.nav-tabs {
+    border-bottom-color: var(--border-color) !important;
+}
+.nav-tabs > li > a {
+    color: var(--text-secondary) !important;
+    border-radius: 8px 8px 0 0 !important;
+    border-bottom: 1px solid transparent !important;
+    margin-right: 5px;
+}
+.nav-tabs > li.active > a, 
+.nav-tabs > li > a:hover {
+    background-color: var(--bg-dark-primary) !important;
+    border-color: var(--border-color) !important;
+    border-bottom-color: transparent !important;
+    color: var(--text-primary) !important;
+}
+.tab-content {
+    background: var(--bg-dark-primary) !important;
+    padding: 20px;
+    border-radius: 0 0 8px 8px;
+    border: 1px solid var(--border-color);
+    border-top: none;
+}
+
 
 /* --- Timeline / FAQ page --- */
 .timeline {
@@ -286,20 +326,13 @@ a:hover {
     color: var(--text-primary) !important;
     font-size: 16px;
     line-height: 1.1;
-    margin: 0;
+    margin: 0 0 10px 0;
     padding-bottom: 10px;
 }
 .timeline-body {
-    color: var(--text-secondary) !important;
     font-size: 14px;
-    padding-top: 10px;
 }
-.timeline-body p, .timeline-body span, .timeline-body a {
-    color: var(--text-secondary) !important;
-}
-.timeline-body a:hover {
-    color: var(--accent-hover) !important;
-}
+
 
 /* Status colors mapped from JS */
 .status-required, tr.status-required td { color: var(--status-required) !important; }
